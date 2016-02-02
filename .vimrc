@@ -34,7 +34,10 @@ set softtabstop=4
 set shiftwidth=4
 
 " nerdTree
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree "Autostart nerdtree
+autocmd VimEnter * wincmd p "Swap to file buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "quit if only nerdtree buffer open
+
 "easymotion
 let g:EasyMotion_leader_key = '<Leader>' 
 set statusline+=%#warningmsg#
