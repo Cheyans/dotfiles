@@ -9,8 +9,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdTree'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
@@ -32,14 +30,6 @@ set number
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-" nerdTree
-autocmd vimenter * NERDTree "Autostart nerdtree
-autocmd VimEnter * wincmd p "Swap to file buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "quit if only nerdtree buffer open
-
-"easymotion
-let g:EasyMotion_leader_key = '<Leader>' 
 
 "syntastic
 set statusline+=%#warningmsg#
