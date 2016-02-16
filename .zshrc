@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/cheyan/.oh-my-zsh
+export ZSH=/home/cheyan/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,13 +8,16 @@
 # 
 eval "$(thefuck --alias fuck)"
 
-
-
-
-
 # THEMING STUFF
 ZSH_THEME="powerlevel9k/powerlevel9k"
 #POWERLEVEL9K_MODE='awesome-fontconfig'
+
+#VIRTUAL-ENV
+plugins=(django git python virtualenvwrapper)
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
 
 #TMUX
 if [[ -z "$TMUX" ]] ;then
