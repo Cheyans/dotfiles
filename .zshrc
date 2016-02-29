@@ -6,14 +6,12 @@ export ZSH=/home/cheyan/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # 
+
 eval "$(thefuck --alias fuck)"
 
 # THEMING STUFF
 ZSH_THEME="powerlevel9k/powerlevel9k"
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-
-#VIRTUAL-ENV
-eval "$(direnv hook zsh)"
 
 if [[ -z "$TMUX" ]] ;then
     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
@@ -69,3 +67,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(direnv hook zsh)"
