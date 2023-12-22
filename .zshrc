@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+alias er='vim ~/.zshrc'
 alias ev='vim ~/.vimrc'
 alias eb='vim ~/.bashrc'
 
