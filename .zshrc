@@ -6,7 +6,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # THEMING STUFF
 ZSH_THEME=pygmalion
 HIST_STAMPS="%d/%m/%y %T"
-RPROMPT="[%D{%f/%m/%y} | %D{%L:%M:%S}]"
+# RPROMPT="[%D{%f/%m/%y} | %D{%L:%M:%S}]"
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
 
 # Re-attach to existing tmux session or create a new one
 tmux_initialize () {
@@ -36,5 +38,13 @@ alias ev='vim ~/.vimrc'
 alias etmux='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 alias eb='vim ~/.bashrc'
+
+# aliases for Tmux
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias td='tmux detach -s'
+alias tkill='tmux kill-session -t'
 
 source $ZSH/oh-my-zsh.sh
